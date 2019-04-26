@@ -1,0 +1,46 @@
+<div ng-show="cadastroForm.nomeCompleto.$error.required && cadastroForm.nomeCompleto.$dirty" class="alert alert-danger">
+	<strong>Atenção!</strong> O preenchimento do <strong>"Nome Completo"</strong> é obrigatório
+</div>
+
+<div ng-show="cadastroForm.email.$error.required && cadastroForm.email.$dirty" class="alert alert-danger">
+	<strong>Atenção!</strong> O preenchimento do <strong>"E-mail"</strong> é obrigatório
+</div>
+
+<div ng-show="cadastroForm.senha.$error.required && cadastroForm.senha.$dirty" class="alert alert-danger">
+	<strong>Atenção!</strong> O preenchimento da <strong>"Senha"</strong> é obrigatorio
+</div>
+
+<div ng-show="cadastroForm.senha_conf.$error.required && cadastroForm.senha_conf.$dirty" class="alert alert-danger">
+	<strong>Atenção!</strong> O preenchimento da <strong>"Confirmação da Senha"</strong> é obrigatório
+</div>
+
+<div ng-show="cadastroForm.senha_conf.$error.validator && cadastroForm.senha_conf.$dirty" class="alert alert-danger">
+	<strong>Atenção!</strong> As senhas digitadas não são iguais
+</div>
+	
+<div class="jumbotron">
+
+	<ol class="breadcrumb">
+	  <li class="active"><strong>{{subtitulo}}</strong></li>
+	</ol>
+	
+	<div ng-show="mensagemErro.length > 0" class="alert alert-danger">
+		{{mensagemErro}}
+	</div>
+	
+	<form name="cadastroForm" ng-show="!goToFormLogin">
+		<input class="form-control" type="text" ng-model="usuario.nomeCompleto" name="nomeCompleto" placeholder="Informe seu Nome Completo" ng-required="true" />
+		<input class="form-control" type="text" ng-model="usuario.email" name="email" placeholder="Informe Seu E-mail (exemplo@dominio.com)" ng-required="true" />
+		<input class="form-control" type="password" ng-model="usuario.senha" name="senha" placeholder="Informe Sua Senha" ng-required="true"/>
+		<input class="form-control" type="password" ng-model="usuario.senha_conf" name="senha_conf" placeholder="Redigite a Senha Informada" ng-required="true" ui-validate="'$value==usuario.senha'" ui-validate-watch="'usuario.senha'"/>
+		<button class="btn btn-primary btn-block" ng-click="cadastrarUsuario(usuario)" ng-disabled="cadastroForm.$invalid">Cadastrar</button>
+		<a href="#/login" class="btn btn-danger btn-block">Cancelar</a>
+	</form>
+	
+	<div ng-show="goToFormLogin" class="alert alert-success">
+		{{mensagemSucesso}}
+	</div>
+	<a ng-show="goToFormLogin" class="btn btn-primary btn-block" href="#/login">Ir para a tela de Login</a>
+	
+	
+</div>

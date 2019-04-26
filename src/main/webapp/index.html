@@ -1,0 +1,55 @@
+<html ng-app="listaCompras">
+
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>App :: Lista de Compras</title>
+		
+		<link rel="icon" type="image/png" href="http://www.iconsdownload.net/icons/24/14073-lover-list.png" />
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/app.css">
+		
+		<script src="lib/angular/angular.js"></script>
+		<script src="lib/angular/angular-local-storage.js"></script>
+		<script src="lib/angular/angular-locale_pt-br.js"></script>
+		<script src="lib/angular/angular-route.js"></script>
+		<script src="lib/angular/ng-currency.js"></script>
+		<script src="lib/angular/validate.js"></script>
+		
+		<script src="js/app.js"></script>
+		
+		<script src="js/controllers/loginController.js"></script>		
+		<script src="js/controllers/mainController.js"></script>
+		<script src="js/controllers/novoUsuarioController.js"></script>
+		
+		<script src="js/services/itemAPIService.js"></script>
+		<script src="js/services/listaAPIService.js"></script>
+		<script src="js/services/listaItemAPIService.js"></script>
+		<script src="js/services/loginAPIService.js"></script>
+		<script src="js/services/unidadeMedidaAPIService.js"></script>
+		<script src="js/services/usuarioAPIService.js"></script>
+		
+		<script src="js/configs/registrarTokenConfig.js"></script>
+		<script src="js/configs/routeConfig.js"></script>
+		<script src="js/configs/storageConfig.js"></script>
+		
+		<script src="js/values/configValue.js"></script>
+		
+		<script src="js/directives/nksOnlyNumber.js"></script>
+		
+	</head>
+
+	<body>
+		
+		<!-- Conteudo -->
+		<div ng-view></div>
+		
+		<!-- Rodapé -->
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+			<div class="container-fluid">
+				<div style="text-align:center" ng-include="'view/rodape.html'"></div>
+			</div>
+		</nav>
+		
+	</body>
+</html>

@@ -1,0 +1,58 @@
+body { 
+	padding-bottom: 70px; 
+}
+
+.fontePequena {
+	font-size: 15px;
+}
+
+.list-group-item {
+	padding: 0px;
+}
+
+.panel-heading {
+	padding: 0px;
+}
+
+.jumbotron {
+	width: 400px;
+	text-align: center;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px
+}
+
+.listaPrincipal {
+	width: 800px;
+}
+
+.table {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.form-control {
+	margin-bottom: 5px;
+}
+
+.form-control-main {
+	margin-bottom: 0px;
+}
+
+.form-control-main-btn {
+	height: 34px;
+}
+
+.tdIcone {
+	padding: 8px 0px 8px 0px;
+}
+
+.textoADireita {
+	text-align: right;
+}
+
+.isComprado {
+	color: #c9c9c9;
+	text-decoration: line-through;
+}
